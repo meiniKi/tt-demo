@@ -1,7 +1,7 @@
 --- 
 # TinyTapeout project information
 project:
-  wokwi_id:    0        # If using wokwi, set this to your project's ID
+  wokwi_id:    354091613399119873        # If using wokwi, set this to your project's ID
 #  source_files:        # If using an HDL, set wokwi_id as 0 and uncomment and list your source files here. Source files must be in ./src
 #    - counter.v
 #    - decoder.v
@@ -17,13 +17,13 @@ yaml_version: 2.1
 #
 # This info will be automatically collected and used to make a datasheet for the chip.
 documentation: 
-  author:       ""      # Your name
+  author:       "meiniKi"      # Your name
   discord:      ""      # Your discord handle - make sure to include the # part as well
-  title:        ""      # Project title
-  description:  ""      # Short description of what your project does
-  how_it_works: ""      # Longer description of how the project works
-  how_to_test:  ""      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
-  external_hw:  ""      # Describe any external hardware needed
+  title:        "Demo Debounce Module"      # Project title
+  description:  "Simple debouncer demo that debounces a button press."      # Short description of what your project does
+  how_it_works: "Two flops in series andded together"      # Longer description of how the project works
+  how_to_test:  "Probe the pins with scope"      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
+  external_hw:  "button, led"      # Describe any external hardware needed
   language:     "wokwi" # other examples include Verilog, Amaranth, VHDL, etc
   doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
   clock_hz:     0       # Clock frequency in Hz (if required) we are expecting max clock frequency to be ~6khz. Provided on input 0.
@@ -31,14 +31,14 @@ documentation:
   inputs:               # a description of what the inputs do
     - clock
     - reset
-    - none
+    - button_0
     - none
     - none
     - none
     - none
     - none
   outputs:
-    - segment a         # a description of what the outputs do
+    - debounced_0         # a description of what the outputs do
     - segment b
     - segment c
     - segment d
